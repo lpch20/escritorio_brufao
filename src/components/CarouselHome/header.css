@@ -1,0 +1,122 @@
+.custom-link {
+  font-family: 'koulen';
+  background-color: transparent;
+  color: white;
+  font-weight: 600; /* font-semibold */
+  line-height: 1.75rem; /* leading-6 */
+  transition: color 0.3s, background-color 0.3s; /* Añadir transición para un efecto suave */
+  text-align: center;
+}
+
+.custom-link:hover {
+  background-color: #3a697a;
+  width: 120;
+  height: 40px;
+  text-align: center; 
+  border-radius: 50px; /* Cambiar el color de fondo al pasar el cursor */
+}
+
+.table-container {
+  position: absolute;
+  bottom: 80px;
+  left: 120px; /* Alinea con el nav */
+  width: calc(90% - 1000px); 
+  height: 400px; /* Ajusta el ancho para tener un margen igual en ambos lados */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+  background-color: rgba(79, 135, 160, 0.6); /* Fondo blanco con un poco de transparencia */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Añade un poco de padding alrededor */
+  border-radius: 20px;
+  border: none;
+}
+
+@media (min-width: 1121px) and (max-width: 2000px) {
+  .table-container {
+    left: 60px; /* Reduce el margen izquierdo */
+    width: 689px; 
+    left: 200px; /* Ajusta el ancho */
+  }
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 1139px) {
+  .table-container {
+    left: 60px; /* Reduce el margen izquierdo */
+    width: 496px; /* Ajusta el ancho */
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    left: 30px; /* Reduce más el margen izquierdo */
+    width: calc(100% - 60px); /* Ajusta más el ancho */
+    bottom: 40px; /* Ajusta la posición desde el fondo */
+    height: 300px; /* Reduce la altura */
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    left: 15px; /* Reduce aún más el margen izquierdo */
+    width: calc(100% - 30px); /* Ajusta el ancho */
+    bottom: 20px; /* Ajusta la posición desde el fondo */
+    height: 250px; /* Reduce más la altura */
+    padding: 10px; /* Reduce el padding */
+  }
+}
+
+/* Estilo para el contenedor de la tabla */
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;/* Centra horizontalmente el contenido de la tabla */
+  align-items: center; /* Centra verticalmente el contenido de la tabla */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  width: 100%;
+}
+
+/* Estilo para el carousel */
+.carousel-root {
+  position: relative;
+}
+
+.carousel .thumbs-wrapper {
+  bottom: 10px;
+}
+
+.carousel .thumbs-wrapper.axis-horizontal .thumb {
+  width: 10px; /* Ajusta el ancho de los puntos */
+  height: 10px; /* Ajusta la altura de los puntos */
+}
+
+.carousel .thumbs-wrapper.axis-horizontal {
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel .control-dots {
+  bottom: 20px; /* Ajusta la posición vertical de los puntos */
+}
+
+.carousel .thumbs-wrapper.axis-horizontal .thumb.selected {
+  background-color: #000; /* Color de fondo de los puntos seleccionados */
+}
+
+.carousel .control-arrow {
+  top: auto;
+  bottom: 20px; /* Ajusta la posición vertical de las flechas */
+}
+
+.carousel .control-arrow:hover {
+  background-color: transparent; /* Cambia el color de fondo al pasar el cursor sobre las flechas */
+}
+
+.carousel.carousel-slider{
+  height: 110%;
+}
+
+.carousel .control-dots{
+  display: none;
+}
