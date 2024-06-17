@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { Carousel } from "react-responsive-carousel";
@@ -14,16 +14,24 @@ const navigation = [
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const backgroundImages = [
+    "url(/image3.jpg)",
+    "url(/image5.jpeg)",
+    "url(/image4.jpeg)",
+  ];
 
   return (
     <div
       style={{
-        backgroundImage: "url(/image3.jpg)",
+        backgroundImage: backgroundImages[currentSlide],
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
         width: "100%",
+        transition: "background-image 1s ease-in-out",
       }}
     >
       <header className="absolute inset-x-2 lg:inset-x-18 top-0 z-50">
@@ -119,6 +127,7 @@ export default function Example() {
           showArrows={true}
           showThumbs={false}
           emulateTouch={true}
+          onChange={(index) => setCurrentSlide(index)}
         >
           <div>
             <div className="table-wrapper">
@@ -164,32 +173,86 @@ export default function Example() {
             </div>
           </div>
           <div>
-            <div className="table-wrapper">
-              <table>
+          <div className="table-wrapper">
+              <h2
+                className="text-start text-3xl lg:text-5xl xl:text-6xl"
+                style={{
+                  fontFamily: "koulen",
+                  color: "white",
+                  display: "inline-block",
+                  marginBottom: "20px", // Ajuste para el espacio entre el título y la tabla
+                  width: "100%", // Ocupa todo el ancho del contenedor
+                  textAlign: "start", // Centrar el texto
+                }}
+              >
+                REPOSICION
+              </h2>
+              <table className="h-[180px] lg:h-[280px] sm:h-[200px] xl:h-[280px]" style={{ width: "100%" }}>
                 <thead>
                   <tr>
-                    <th>Title 2</th>
+                    <th className="text-start" style={{ fontFamily: "arial", color: "white" }}>A la carne</th>
+                    <th className="text-center sm:text-center xl:text-center lg:text-center" style={{ fontFamily: "arial", color: "white" }}>Semana Anterior</th>
+                    <th className="text-center sm:text-center xl:text-center lg:text-center" style={{ fontFamily: "arial", color: "white" }}>Semana 23</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>FLACO PAJERO 2</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  text-start" style={{ fontFamily: "koulen", color: "white" }}>TERNERO</td>
+                    <td  className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td  className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl xl:text-center lg:text-center  text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                  </tr>
+                  <tr>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl   text-start" style={{ fontFamily: "koulen", color: "white" }}>TERNERA</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                  </tr>
+                  <tr>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl   text-start" style={{ fontFamily: "koulen", color: "white" }}>VACA DE INVERNADA</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl xl:text-center lg:text-center  text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
           <div>
-            <div className="table-wrapper">
-              <table>
+          <div className="table-wrapper">
+              <h2
+                className="text-start text-3xl lg:text-5xl xl:text-6xl"
+                style={{
+                  fontFamily: "koulen",
+                  color: "white",
+                  display: "inline-block",
+                  marginBottom: "20px", // Ajuste para el espacio entre el título y la tabla
+                  width: "100%", // Ocupa todo el ancho del contenedor
+                  textAlign: "start", // Centrar el texto
+                }}
+              >
+                OVINOS
+              </h2>
+              <table className="h-[180px] lg:h-[280px] sm:h-[200px] xl:h-[280px]" style={{ width: "100%" }}>
                 <thead>
                   <tr>
-                    <th>Title 3</th>
+                    <th className="text-start" style={{ fontFamily: "arial", color: "white" }}>A la carne</th>
+                    <th className="text-center sm:text-center xl:text-center lg:text-center" style={{ fontFamily: "arial", color: "white" }}>Semana Anterior</th>
+                    <th className="text-center sm:text-center xl:text-center lg:text-center" style={{ fontFamily: "arial", color: "white" }}>Semana 23</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>FLACO PAJERO 3</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  text-start" style={{ fontFamily: "koulen", color: "white" }}>CORDEROS</td>
+                    <td  className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td  className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl xl:text-center lg:text-center  text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                  </tr>
+                  <tr>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl   text-start" style={{ fontFamily: "koulen", color: "white" }}>CAPONES</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                  </tr>
+                  <tr>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl   text-start" style={{ fontFamily: "koulen", color: "white" }}>OVEJAS</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl xl:text-center lg:text-center  text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
+                    <td className="xl:text-4xl lg:text-4xl sm:text-4xl text-2xl  xl:text-center lg:text-center text-center" style={{ fontFamily: "koulen", color: "white" }}>69</td>
                   </tr>
                 </tbody>
               </table>
