@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.px-24 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Estilos específicos para pantallas de al menos 768px */
+@media (min-width: 768px) {
+    .px-24 {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}

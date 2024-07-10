@@ -1,14 +1,60 @@
 import Header from "../../components/Header/Header";
 import CaruselHome from "../../components/CarouselHome/CarouselHome";
+import HowAreYou from "../../components/HowAreYou/HowAreYou";
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  FingerPrintIcon,
+  LockClosedIcon,
+} from "@heroicons/react/24/outline";
+
+const features = [
+  {
+    name: "Advanced security",
+    description:
+      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+    icon: "/mano.png",
+  },
+  {
+    name: "Analytics",
+    description:
+      "Feugiat primis ultrice in ligula risus auctor tempus feugiat dolor lacinia cubilia curae integer congue leo metus mollis primis dolor.",
+    icon: "/store.png",
+  },
+  {
+    name: "Automated workflows",
+    description:
+      "Etiam sapien sem at sagittis congue an augue massa varius egestas magna suscipit mauris. Integer congue leo metus mollis risus.",
+    icon: "/trabajo.png",
+  },
+  {
+    name: "Cloud storage",
+    description:
+      "Augue luctus neque purus ipsum neque dolor primis libero tempus at blandit massa varius egestas sapien and feugiat primis.",
+    icon: "/camion.png",
+  },
+  {
+    name: "Customer support",
+    description:
+      "Augue luctus neque purus ipsum neque dolor primis libero tempus at blandit massa varius egestas sapien and feugiat primis.",
+    icon: "/Lector.png",
+  },
+  {
+    name: "Integrations",
+    description:
+      "Augue luctus neque purus ipsum neque dolor primis libero tempus at blandit massa varius egestas sapien and feugiat primis.",
+    icon: "/shearing.png",
+  },
+];
 
 export default function Home() {
   return (
     <>
       <header>
-        <CaruselHome></CaruselHome>
+        <CaruselHome />
       </header>
       <main>
-        <section
+        {/* <section
           className="pt-10 pb-10 md:pt-10 md:pb-10 inset-x-2 lg:inset-x-18 flex lg:flex-col md:flex-col gap-15 lg:gap-15 md:gap-15 flex-wrap justify-center md:justify-center md:flex-wrap lg:justify-around xl:flex-col xl:justify-around"
           style={{ backgroundColor: "#1d88a2", height: "100vh", width: "100%" }}
         >
@@ -42,21 +88,64 @@ export default function Home() {
               <h3 className="pt-5">SERVICIO DE TRAZABLIDAD</h3>
             </div>
           </div>
+        </section> */}
+        <section>
+          <div className="bg-white py-24 sm:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto ">
+                <h2
+                  style={{ fontFamily: "koulen", color: '#1d88a2' }}
+                  className="text-base xl:text-9xl"
+                >
+                  SERVICIOS
+                </h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Everything you need to deploy your app
+                </p>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  Quis tellus eget adipiscing convallis sit sit eget aliquet
+                  quis. Suspendisse eget egestas a elementum pulvinar et feugiat
+                  blandit at. In mi viverra elit nunc.
+                </p>
+              </div>
+              <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+                <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="relative pl-16">
+                      <dt className="text-base font-semibold leading-7 text-gray-900">
+                        <div style={{backgroundColor: '#1b2e78'}} className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600">
+                          <img
+                            src={feature.icon}
+                            alt={feature.name}
+                            className="h-10 w-10 rounded-lg"
+                          />
+                        </div>
+                        {feature.name}
+                      </dt>
+                      <dd className="mt-2 text-base leading-7 text-gray-600">
+                        {feature.description}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          </div>
         </section>
+
         <article
-          className="pt-10 pb-10 inset-x-2 lg:inset-x-18 xl:flex flex-row"
+          className="pt-10 pb-10 inset-x-2 lg:inset-x-18 xl:flex flex-row px-24"
           style={{
-            backgroundImage: 'url("/camion_zastre.jpeg")',
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(79, 135, 160, 0), rgba(79, 135, 160, 0.6)), url("/camion_zastre.jpeg")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "auto",
             width: "100%",
-            paddingLeft: "40px",
-            paddingRight: "40px",
           }}
         >
-          <div className="xl:w-1/2 xl:flex xl:flex-col xl:items-center">
+          <div className=" xl:w-1/2 xl:flex xl:flex-col xl:items-center">
             <div className="w-full flex justify-center items-center flex-col">
               <img
                 className="w-full max-w-lg pb-10"
@@ -192,9 +281,10 @@ export default function Home() {
           </div>
         </article>
         <section
-          className="flex flex-col w-full inset-x-2"
+          className="flex flex-col w-full px-24 py-24"
           style={{
-            backgroundImage: 'url("/image6.jpg")',
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(79, 135, 160, 0), rgba(79, 135, 160, 0.6)), url("/image6.jpg")',
             height: "auto",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -202,15 +292,18 @@ export default function Home() {
             color: "white",
           }}
         >
-          <div className="p-12 flex flex-col items-start">
+          <div className="pb-12 flex flex-col xl:items-start items-center w-full">
             <div className="w-1/2">
-              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl">
+              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl text-8xl">
                 MISIÓN
               </h2>
             </div>
             <div
-              className="w-1/2 p-5"
-              style={{ backgroundColor: "rgba(79, 135, 160, 0.6)", borderRadius: '8px' }}
+              className="lg:w-1/2 lg:p-5 xl:w-1/2 xl:p-5 w-auto p-5"
+              style={{
+                backgroundColor: "rgba(79, 135, 160, 0.6)",
+                borderRadius: "8px",
+              }}
             >
               En Federico Brufao Negocios Rurales, nuestra misión es
               proporcionar soluciones integrales y personalizadas a lo largo de
@@ -220,15 +313,18 @@ export default function Home() {
               y desarrollo sostenible del sector agropecuario en Uruguay.
             </div>
           </div>
-          <div className="p-12 flex flex-col items-start">
+          <div className="pb-12 flex flex-col  items-center xl:items-end w-full">
             <div className="w-1/2 ">
-              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl">
+              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl text-8xl">
                 VISIÓN
               </h2>
             </div>
             <div
-              className="w-1/2 p-5"
-              style={{ backgroundColor: "rgba(79, 135, 160, 0.6)", borderRadius: '8px' }}
+              className="lg:w-1/2 lg:p-5 xl:w-1/2 xl:p-5 w-auto p-5"
+              style={{
+                backgroundColor: "rgba(79, 135, 160, 0.6)",
+                borderRadius: "8px",
+              }}
             >
               Nuestra visión es ser líderes en el sector de negocios rurales en
               Uruguay, reconocidos por nuestra capacidad de combinar la
@@ -238,15 +334,18 @@ export default function Home() {
               con nuestros clientes en todo el país.
             </div>
           </div>
-          <div className="p-12 flex flex-col items-start">
-            <div className="w-1/2">
-              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl">
+          <div className="pb-12 flex xl:items-start flex-col items-center w-full">
+            <div className="xl:w-1/2 lg:w-1/2 w-auto ml-18.5">
+              <h2 style={{ fontFamily: "koulen" }} className="xl:text-8xl text-8xl">
                 VALORES
               </h2>
             </div>
             <div
-              className="w-1/2 p-5"
-              style={{ backgroundColor: "rgba(79, 135, 160, 0.6)", borderRadius: '8px' }}
+              className="lg:w-1/2 lg:p-5 xl:w-1/2 xl:p-5 w-auto p-5"
+              style={{
+                backgroundColor: "rgba(79, 135, 160, 0.6)",
+                borderRadius: "8px",
+              }}
             >
               Compromiso, innovación, confianza, experiencia, proximidad y
               sostenibilidad. Son los pilares que nos acompañan en nuestro día a
@@ -254,6 +353,9 @@ export default function Home() {
               forma de crecimiento.
             </div>
           </div>
+        </section>
+        <section>
+          <HowAreYou></HowAreYou>
         </section>
       </main>
     </>
