@@ -25,16 +25,16 @@ const people = [
 export default function HowAreYou() {
   return (
     <div className="bg-white  sm:py-32 px-24 py-24 lg:inset-x-18 ">
-      <div className="mx-auto flex-col justify-center items-center xl:flex-col flex">
-        <div className="">
-          <h2 style={{fontFamily: 'koulen', color: '#1d88a2'}} className="text-3xl font-bold xl:text-9xl tracking-tight sm:text-4xl">
+      <div className="mx-auto max-w-7xl flex-col justify-center items-center xl:flex-col flex">
+        <div className="w-full">
+          <h2 style={{fontFamily: 'koulen', color: '#1d88a2'}} className="font-bold flex justify-center xl:text-9xl w-full tracking-tight sm:text-8xl xl:flex xl:justify-start sm:text-center text-6xl">
             Nuestro equipo
           </h2>
         </div>
-        <div >
+        <div className="w-full">
         <ul
           role="list"
-          className="flex xl:flex-row flex-col justify-center items-start gap-24 xl:items-center xl:justify-between pt-16"
+          className="flex xl:flex-row sm:flex sm:items-center items-center flex-col justify-center gap-24 xl:items-center xl:justify-between pt-16"
         >
           {people.map((person) => (
             <li key={person.name}>

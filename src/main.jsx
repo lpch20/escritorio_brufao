@@ -16,9 +16,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router}>
-        {/* Aquí debería ir el elemento principal de tu aplicación */}
-        <App></App>
+      <RouterProvider router={router}>ß
       </RouterProvider>
     </ThemeProvider>
   </React.StrictMode>

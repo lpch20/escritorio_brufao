@@ -1,0 +1,41 @@
+.carousel-container {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #fff;
+}
+
+.services-carousel .react-multi-carousel-item {
+  padding: 10px; /* Ajusta este valor para el espacio entre elementos */
+}
+
+.service-item {
+  background-color: rgb(27, 46, 120);
+  padding: 20px;
+  border-radius: 15px; /* Borde redondeado */
+  /* border: 2px solid #CE2C38; Borde con color especificado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombreado */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para el efecto hover */
+  height: 250px; /* Ajusta este valor según sea necesario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más fuerte al hacer hover */
+}
+
+.service-item img {
+  max-width: 100px; /* Asegura que todas las imágenes tengan el mismo tamaño */
+  margin-bottom: 16px;
+}
+
+.service-item p {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}

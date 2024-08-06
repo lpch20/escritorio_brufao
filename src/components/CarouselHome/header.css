@@ -31,22 +31,22 @@
   border: none;
 }
 
-@media (min-width: 1121px) and (max-width: 2000px) {
+/* Adaptación para dispositivos grandes */
+@media (min-width: 1258px) and (max-width: 2000px) {
   .table-container {
-    left: 60px; /* Reduce el margen izquierdo */
-    width: 689px; 
-    left: 200px; /* Ajusta el ancho */
+    left: calc((100% - 1270px) / 2); /* Centra horizontalmente y ajusta el margen */
+    width: 689px; /* Ajusta el ancho */
   }
 }
-
-/* Adaptación para dispositivos móviles */
-@media (max-width: 1139px) {
+/* Adaptación para dispositivos medianos */
+@media (max-width: 1258px) {
   .table-container {
     left: 60px; /* Reduce el margen izquierdo */
     width: 496px; /* Ajusta el ancho */
   }
 }
 
+/* Adaptación para dispositivos pequeños */
 @media (max-width: 768px) {
   .table-container {
     left: 30px; /* Reduce más el margen izquierdo */
@@ -56,6 +56,7 @@
   }
 }
 
+/* Adaptación para dispositivos muy pequeños */
 @media (max-width: 480px) {
   .table-container {
     left: 15px; /* Reduce aún más el margen izquierdo */
@@ -65,6 +66,7 @@
     padding: 10px; /* Reduce el padding */
   }
 }
+
 
 /* Estilo para el contenedor de la tabla */
 .table-wrapper {
