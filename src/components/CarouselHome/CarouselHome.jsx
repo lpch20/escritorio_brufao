@@ -34,6 +34,7 @@ export default function Example() {
 
   return (
     <div
+      className="full-height"
       style={{
         backgroundImage: backgroundImages[currentSlide],
         backgroundRepeat: "no-repeat",
@@ -80,22 +81,22 @@ export default function Example() {
           </div>
         </nav>
         <Dialog
-          className="lg:hidden w-64"
+          className="lg:hidden w-64 z-50"
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
-          <div className="fixed inset-0 z-50" />
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50" />
           <DialogPanel
-            style={{ backgroundColor: "#1B2D78", position: "absolute", zIndex: "2" }}
+            style={{ backgroundColor: "#1B2D78", position: "absolute", zIndex: 50 }}
             className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
           >
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
+                  className="h-14 w-90 lg:w-[340px] lg:h-[80px] xl:w-[408px] xl:h-[121px]"
+                  src="/Logo_FB.png"
+                  alt="Imagen del Logo de la Empresa"
                 />
               </a>
               <button
@@ -126,7 +127,7 @@ export default function Example() {
         </Dialog>
       </header>
 
-      <div className="table-container max-w-7xl">
+      <div className="table-container max-w-7xl z-40">
         <div className="max-w-7xl">
           <Carousel
             autoPlay={true}
