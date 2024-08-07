@@ -40,10 +40,10 @@ const features = [
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="w-full p-0 m-0">
         <CaruselHome />
       </header>
-      <main>
+      <main className="">
         {/* <section
           className="pt-10 pb-10 md:pt-10 md:pb-10 inset-x-2 lg:inset-x-18 flex lg:flex-col md:flex-col gap-15 lg:gap-15 md:gap-15 flex-wrap justify-center md:justify-center md:flex-wrap lg:justify-around xl:flex-col xl:justify-around"
           style={{ backgroundColor: "#1d88a2", height: "100vh", width: "100%" }}
@@ -273,7 +273,7 @@ export default function Home() {
         </article>
         <section
           id="historia"
-          className="flex flex-col w-full  px-24 py-24"
+          className="flex flex-col w-full px-24 py-24"
           style={{
             backgroundImage:
               'linear-gradient(to bottom, rgba(79, 135, 160, 0), rgba(79, 135, 160, 0.6)), url("/image6.jpg")',

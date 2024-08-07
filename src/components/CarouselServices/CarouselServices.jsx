@@ -4,12 +4,12 @@ import "react-multi-carousel/lib/styles.css";
 import "./carouselService.css";
 
 const services = [
-  { icon: "/Lector.png", title: "Advanced security" },
-  { icon: "/camion.png", title: "Analytics" },
-  { icon: "/store.png", title: "Automated workflows" },
-  { icon: "/shearing.png", title: "Cloud storage" },
-  { icon: "/trabajo.png", title: "Customer support" },
-  { icon: "/mano.png", title: "Integrations" },
+  { icon: "/Lector.png", title: "SERVICIO DE TRAZABILIDAD" },
+  { icon: "/camion.png", title: "TRANSPORTE DE GANADO" },
+  { icon: "/store.png", title: "VENTAS A FRIGORÍFICOS" },
+  { icon: "/shearing.png", title: "VENTAS DE LANA" },
+  { icon: "/trabajo.png", title: "VENTAS/ARRENDAMIENTO DE CAMPOS Y PROPIEDADES" },
+  { icon: "/mano.png", title: "NEGOCIOS PARTICULARES" },
 ];
 
 const responsive = {
@@ -25,7 +25,7 @@ const CarouselServices = () => {
       <div id="service">
         <h2
           style={{ fontFamily: "koulen", color: '#1d88a2' }}
-          className="leading-7 flex xl:flex xl:items-start font-bold xl:text-9xl  text-8xl items-center xl:justify-start justify-center text-center mb-10"
+          className="leading-7 flex xl:flex xl:items-start font-bold xl:text-9xl p-4 text-8xl items-center xl:justify-start justify-center text-center mb-10"
         >
           SERVICIOS
         </h2>

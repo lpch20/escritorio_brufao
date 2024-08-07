@@ -4,7 +4,7 @@ import './toolTip.css';
 export default function ToolTipsRedes() {
   return (
     <div className=''>
-      <ul className="example-2 mr-0">
+      <ul className="example-2 mr-20">
         <li style={{marginLeft: '-10px'}} className="icon-content w-5 ">
           <a
             href="https://linkedin.com/"
@@ -29,7 +29,7 @@ export default function ToolTipsRedes() {
           </a>
           <div className="tooltip">LinkedIn</div>
         </li>
-        <li className="icon-content w-6">
+        {/* <li className="icon-content w-6">
           <a
             href="https://www.github.com/"
             aria-label="GitHub"
@@ -52,7 +52,7 @@ export default function ToolTipsRedes() {
             </svg>
           </a>
           <div className="tooltip">GitHub</div>
-        </li>
+        </li> */}
         <li className="icon-content w-6">
           <a
             href="https://www.instagram.com/"
@@ -77,7 +77,7 @@ export default function ToolTipsRedes() {
           </a>
           <div className="tooltip">Instagram</div>
         </li>
-        <li className="icon-content w-6">
+        {/* <li className="icon-content w-6">
           <a
             href="https://youtube.com/"
             aria-label="Youtube"
@@ -100,7 +100,7 @@ export default function ToolTipsRedes() {
             </svg>
           </a>
           <div className="tooltip">Youtube</div>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

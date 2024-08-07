@@ -7,10 +7,15 @@
     padding-right: 1rem;
 }
 
+body{
+    background-color: transparent;
+}
+
 /* Estilos específicos para pantallas de al menos 768px */
-@media (min-width: 768px) {
-    .px-24 {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Ocultar desbordamiento horizontal */
 }
