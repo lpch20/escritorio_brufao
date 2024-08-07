@@ -8,8 +8,8 @@ import "./header.css";
 const navigation = [
   { name: "SERVICIOS", href: "#service" },
   { name: "HISTORIA", href: "#historia" },
-  { name: "CONTACTO", href: "#contacto" },
   { name: "NUESTRO EQUIPO", href: "#nuestro-equipo" },
+  { name: "CONTACTO", href: "#contacto" },
 ];
 
 export default function Example() {

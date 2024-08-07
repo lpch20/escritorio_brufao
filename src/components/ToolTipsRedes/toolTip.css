@@ -73,9 +73,9 @@ ul {
     background-color: #0274b3;
   }
   
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
+  .example-2 .icon-content a[data-social="whatsapp"] .filled,
+  .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+    background-color: green;
   }
   .example-2 .icon-content a[data-social="instagram"] .filled,
   .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {

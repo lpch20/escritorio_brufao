@@ -358,10 +358,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section id="nuestro-equipo">
           <HowAreYou></HowAreYou>
         </section>
-        <section>
+        <section id='contacto'>
           <FormContact></FormContact>
         </section>
       </main>

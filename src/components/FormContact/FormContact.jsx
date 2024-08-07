@@ -16,7 +16,7 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function FormContact() {
   return (
-    <form>
+    <form id='#contacto'>
       <div style={{backgroundColor: 'rgb(27, 46, 120)' , borderRadius:'10px', color:'white'}} className="max-w-7xl xl:m-auto p-20">
         <div className="border-b border-gray-900/10 pb-12 xl:flex xl:justify-between xl:items-center">
           <h2 style={{fontFamily: "koulen"}} className="font-semibold leading-7 text-5xl xl:text-8xl">Contactate</h2>
@@ -58,7 +58,7 @@ export default function FormContact() {
               </div>
             </div>
 
-            <div className="sm:col-span-4">
+            <div className="sm:col-span-6">
               <label htmlFor="email" className="block text-sm font-medium leading-6 ">
                 Email 
               </label>
@@ -74,7 +74,7 @@ export default function FormContact() {
             </div>
 
 
-            <div className="sm:col-span-2 sm:col-start-1">
+            <div className="sm:col-span-3 sm:col-start-1">
               <label htmlFor="city" className="block text-sm font-medium leading-6 ">
                 Ciudad
               </label>
@@ -89,7 +89,7 @@ export default function FormContact() {
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-3">
               <label htmlFor="region" className="block text-sm font-medium leading-6 ">
                 Numero de Contacto
               </label>
